@@ -8,3 +8,5 @@
 **/verification.key
 **/proving.key
 **/witness
+**/.DS_Store
+.DS_Store
