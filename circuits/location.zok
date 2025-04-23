@@ -1,0 +1,20 @@
+def main(
+    private field x1, private field y1, private field z1,   // UAV position
+    field x2, field y2, field z2,                           // Public reference point
+    field threshold                                 // Public: threshold^2 (e.g., 100^2 = 10000)
+) -> bool {
+    assert(x1-x2>=0);
+    assert(y1-y2>=0);
+    assert(z1-z2>=0);
+    field dx = x1 - x2;
+    field dy = y1 - y2;
+    field dz = z1 - z2;
+
+    field dx2 = dx * dx;
+    field dy2 = dy * dy;
+    field dz2 = dz * dz;
+
+    field distance_squared = dx2 + dy2 + dz2;
+    field distance = distance_squared ** (1/2);
+    return if distance <= threshold {true} else {false};
+}

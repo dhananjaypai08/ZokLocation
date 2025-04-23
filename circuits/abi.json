@@ -1,0 +1,42 @@
+{
+  "inputs": [
+    {
+      "name": "x1",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "y1",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "z1",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "x2",
+      "public": true,
+      "type": "field"
+    },
+    {
+      "name": "y2",
+      "public": true,
+      "type": "field"
+    },
+    {
+      "name": "z2",
+      "public": true,
+      "type": "field"
+    },
+    {
+      "name": "threshold",
+      "public": true,
+      "type": "field"
+    }
+  ],
+  "output": {
+    "type": "bool"
+  }
+}
