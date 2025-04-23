@@ -15,5 +15,6 @@ npm install
 node proof.js
 ```
 **Note**:  make sure to include your private and public inputs within the proof.json generate witness step 
-3.(Optional) Deploy `contracts/VerifierLocation.sol` on any chain and call the function `verifyTx`.
+
+3. (Optional) Deploy `contracts/VerifierLocation.sol` on any chain and call the function `verifyTx`.
 You will need Proof tuples and inputs present in your generated proof in file `proof.json`
