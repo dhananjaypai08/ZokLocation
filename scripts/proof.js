@@ -6,7 +6,6 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-console.log("hello")
 initialize().then(async(zokratesProvider) => {
     const filePath = join(__dirname, '../circuits', 'location.zok');
     console.log(filePath);
