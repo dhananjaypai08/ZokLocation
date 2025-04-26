@@ -1,10 +1,12 @@
 use risc0_zkvm::guest::env;
 use sha2::{Digest, Sha256};
 
-fn main() {
-    // read the input
-    let (latitude1, longitude1, latitude2, longitude2, threshold): (f64, f64, f64, f64, f64) = env::read();
+mod gps_location;
+use gps_location::get_location;
 
+fn main() {
+    let (latitude1, longitude1, latitude2, longitude2, threshold): (f64, f64, f64, f64, f64) = env::read();
+    get_location();
     let dx = latitude1 - latitude2;
     let dy = longitude1 - longitude2;
     let distance = (dx * dx + dy * dy).sqrt();
@@ -22,6 +24,6 @@ fn main() {
     } else{
         println!("Location is outside the threshold");
     }
-    // write public output to the journal
+
     env::commit(&hash_array);
 }
