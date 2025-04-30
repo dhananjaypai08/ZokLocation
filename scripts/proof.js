@@ -12,7 +12,7 @@ initialize().then(async(zokratesProvider) => {
     const source = await readFile(filePath, 'utf-8');
   
     const artifacts = zokratesProvider.compile(source);
-    const { witness, output } = zokratesProvider.computeWitness(artifacts, ["19241908", "73134926", "0", "19241948", "73134823", "0", "10"]);
+    const { witness, output } = zokratesProvider.computeWitness(artifacts, ["19241863", "73136667", "19242183", "73135059", "2688063"]);
 
     const keypair = zokratesProvider.setup(artifacts.program);
 
